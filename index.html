@@ -18,31 +18,68 @@
 				<main class="content">
 
 					<div class="uppermain"><!-- upper part -->
-						<form action="" name="form1">
-							<p>Имя счета:</p>
-							<input type="text" name="NameOfCount" id="NameOfCount"/>
-		
-							<p>Сумма:</p>
-							<input type="text" name="ValueOfCount" id="ValueOfCount"/>
-				
-							<p>Дата:</p>
-							<input type="text" name="DataOfCount" id="DataOfCount"/>
-						
-							<p>Описание:</p>
-							<textarea name="DescriptionOfCount" id="DescriptionOfCount"></textarea>
-						
-							<p></p>
-							<input type="button" name="AddOneTransaction" value="Add" id="AddOneTransaction"/>
 
-							<p></p>
-							<tbody>
-								<td><a href="#"></a></td>
-					            <td><editable-text value="record.login">рат</editable-text></td>
-					            <td><editable-text value="record.password" crypto="true">рат</editable-text></td>
-					            <td><a href="#">удалить</a></td>
-							</tbody>
+						<div class="notebook">
+						    <input type="radio" name="notebook1" id="notebook1_1" checked
+						    ><label for="notebook1_1">Доход</label
+						    ><input type="radio" name="notebook1" id="notebook1_2"
+						    ><label for="notebook1_2">Расход</label
+						    ><input type="radio" name="notebook1" id="notebook1_3"
+						    ><label for="notebook1_3">Дополнительно</label
+						    >
 
-						</form>
+						    <div>
+        						<h3>Это перевая вкладка - доход</h3>
+        						<label class="label" for="NameOfCount">На счет:</label>
+        						<input  type="text" name="NameOfCount" id="NameOfCount" class="IncomOutcomForm" required/>
+        						<p></p>
+        						<label class="label"for="NameOfIncome">Доход от:</label>
+        						<input  type="text" name="NameOfIncome" id="NameOfIncome" class="IncomOutcomForm" required/>
+        						<p></p>
+        						<label class="label"for="DataOfCount">Дата:</label>
+								<input  type="date" type="text" name="DataOfCount" id="DataOfCount" class="IncomOutcomForm" required/>
+								<p></p>
+        						<label class="label"for="ValueOfCount">Cумма:</label>
+        						<input  pattern="\d+(\.\d{2})?" type="text" name="ValueOfCount" id="ValueOfCount" class="IncomOutcomForm" required/>
+        						<p></p>
+        						<Label class="label"for="DescriptionOfCount">Описание:</label>
+								<textarea cols="30" rows="6" name="DescriptionOfCount" id="DescriptionOfCount" class="Description" required></textarea>
+								<p></p>
+								<span class="label"></span>
+								<input class="buttonAdd" type="button" name="AddOneTransaction" value="Добавить" id="AddOneTransaction"/>
+        						<p>Здесь будет код формы для дохода. Нужно его впоследствии дописать и дописать скрипты. Нужно обязательно добавить код который будет заносить время в базу данных.
+        							для работы с ним</p>
+    						</div>
+    						<div>
+        						<h3>Это вторая вкладка - рахода</h3>
+        						<label class="label"for="NameOfCount">C счета:</label>
+        						<input  type="text" name="NameOfCount" id="NameOfCount" class="IncomOutcomForm" required/>
+        						<p></p>
+        						<label class="label" for="NameOfIncome">Расход на:</label>
+        						<input  type="text" name="NameOfIncome" id="NameOfIncome" class="IncomOutcomForm" required/>
+        						<p></p>
+        						<label class="label" for="DataOfCount">Дата:</label>
+								<input  type="date" type="text" name="DataOfCount" id="DataOfCount" class="IncomOutcomForm" required/>
+								<p></p>
+        						<label class="label" for="ValueOfCount">Cумма:</label>
+        						<input  pattern="\d+(\.\d{2})?" type="text" name="ValueOfCount" id="ValueOfCount" class="IncomOutcomForm" required/>
+        						<p></p>
+        						<Label class="label" for="DescriptionOfCount">Описание:</label>
+								<textarea cols="30" rows="6" name="DescriptionOfCount" id="DescriptionOfCount" class="Description" required></textarea>
+								<p></p>
+								<span class="label"></span>
+								<input class="buttonAdd" type="button" name="AddOneTransaction" value="Добавить" id="AddOneTransaction"/>
+        						<p>Здесь будет код формы для расходов. Впоследствии и его тоже нужно написать и дописать 
+        							скрипт для его работы</p>
+    						</div>
+    						<div>
+        						<h3>Это третья вкладка - дополнительно</h3>
+        						<p>Пока нет адакватной ей применения в дальнейшем ее может не быть. Но возможно здесь будет 
+        							график для отображения добавленнных расходов и доходов</p>
+    						</div>
+    					</div>
+
+						
 					</div>
 
 					<div class="lowermain"><!-- lower part -->

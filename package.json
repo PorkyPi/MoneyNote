@@ -7,7 +7,7 @@
   "window": {
 	  "title": "MoneyNote",
 	  "toolbar": false,
-	  "icon": "pic/Favi.png",
+	  "icon": "pic/favi.png",
 	  "position": "center",
 	  "resizable": false,
 	  "width": 1300,
