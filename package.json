@@ -1,0 +1,16 @@
+{
+  "name": "MoneyNote",
+  "main": "index.html",
+  "version": "0.01",
+  "dexcription": "My first app",
+  "author": "Sergii",
+  "window": {
+	  "title": "MoneyNote",
+	  "toolbar": false,
+	  "icon": "pic/Favi.png",
+	  "position": "center",
+	  "resizable": false,
+	  "width": 1300,
+	  "height": 803
+	}
+}

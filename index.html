@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>MoneyNote v0.01</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+
+		<header class="header"><!-- .header-->
+			<strong>Header</strong>
+		</header><!-- .header-->
+
+		<div class="middle"><!-- .middle-->
+
+			<div class="container">
+				<main class="content">
+
+					<div class="uppermain"><!-- upper part -->
+						<form action="" name="form1">
+							<p>Имя счета:</p>
+							<input type="text" name="NameOfCount" id="NameOfCount"/>
+		
+							<p>Сумма:</p>
+							<input type="text" name="ValueOfCount" id="ValueOfCount"/>
+				
+							<p>Дата:</p>
+							<input type="text" name="DataOfCount" id="DataOfCount"/>
+						
+							<p>Описание:</p>
+							<textarea name="DescriptionOfCount" id="DescriptionOfCount"></textarea>
+						
+							<p></p>
+							<input type="button" name="AddOneTransaction" value="Add" id="AddOneTransaction"/>
+
+							<p></p>
+							<tbody>
+								<td><a href="#"></a></td>
+					            <td><editable-text value="record.login">рат</editable-text></td>
+					            <td><editable-text value="record.password" crypto="true">рат</editable-text></td>
+					            <td><a href="#">удалить</a></td>
+							</tbody>
+
+						</form>
+					</div>
+
+					<div class="lowermain"><!-- lower part -->
+						<strong>История</strong>
+
+						<thead>
+							<tr>
+								<th>Номер транзакции</th>
+								<th>Сумма</th>
+								<th>Описание транзакции</th>
+								<th>Число</th>
+								<th>Время</th>
+								<th>Остаток на счету</th>
+								<th>Для кнопки удалить</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</tbody>
+					</div>
+
+				</main>
+			</div>
+
+			<aside class="left-sidebar">
+				<strong>Left Sidebar</strong>
+			</aside>
+
+		</div><!-- .middle-->
+
+		<footer class="footer"><!-- .footer -->
+			<strong>Footer</strong>
+		</footer><!-- .footer -->
+
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
