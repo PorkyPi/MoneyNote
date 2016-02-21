@@ -29,26 +29,28 @@
 						    >
 
 						    <div>
+						    	<form name="income">
         						<h3>Это перевая вкладка - доход</h3>
         						<label class="label" for="NameOfCount">На счет:</label>
-        						<input  type="text" name="NameOfCount" id="NameOfCount" class="IncomOutcomForm" required/>
+        						<input  type="text" name="NameOfCount" id="NameOfCount" class="IncomOutcomForm" />
         						<p></p>
         						<label class="label"for="NameOfIncome">Доход от:</label>
-        						<input  type="text" name="NameOfIncome" id="NameOfIncome" class="IncomOutcomForm" required/>
+        						<input  type="text" name="NameOfIncome" id="NameOfIncome" class="IncomOutcomForm" />
         						<p></p>
         						<label class="label"for="DataOfCount">Дата:</label>
-								<input  type="date" type="text" name="DataOfCount" id="DataOfCount" class="IncomOutcomForm" required/>
+								<input  type="date" type="text" name="DataOfCount" id="DataOfCount" class="IncomOutcomForm" />
 								<p></p>
         						<label class="label"for="ValueOfCount">Cумма:</label>
-        						<input  pattern="\d+(\.\d{2})?" type="text" name="ValueOfCount" id="ValueOfCount" class="IncomOutcomForm" required/>
+        						<input type="text" name="ValueOfCount" id="ValueOfCount" class="IncomOutcomForm" />
         						<p></p>
         						<Label class="label"for="DescriptionOfCount">Описание:</label>
-								<textarea cols="30" rows="6" name="DescriptionOfCount" id="DescriptionOfCount" class="Description" required></textarea>
+								<textarea cols="30" rows="6" name="DescriptionOfCount" id="DescriptionOfCount" class="Description"></textarea>
 								<p></p>
 								<span class="label"></span>
-								<input class="buttonAdd" type="button" name="AddOneTransaction" value="Добавить" id="AddOneTransaction"/>
+								<input class="buttonAdd" type="button" name="AddOneIncome" value="Добавить" id="AddOneIncome" formaction="scripts/income.js"/>
         						<p>Здесь будет код формы для дохода. Нужно его впоследствии дописать и дописать скрипты. Нужно обязательно добавить код который будет заносить время в базу данных.
         							для работы с ним</p>
+        						</form>
     						</div>
     						<div>
         						<h3>Это вторая вкладка - рахода</h3>
@@ -123,6 +125,6 @@
 			<strong>Footer</strong>
 		</footer><!-- .footer -->
 
-		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="scripts/income.js"></script>
 	</body>
 </html>

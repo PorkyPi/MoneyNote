@@ -6,7 +6,7 @@
   "author": "Sergii",
   "window": {
 	  "title": "MoneyNote",
-	  "toolbar": false,
+	  "toolbar": true,
 	  "icon": "pic/favi.png",
 	  "position": "center",
 	  "resizable": false,
