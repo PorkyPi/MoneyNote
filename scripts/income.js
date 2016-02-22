@@ -82,7 +82,7 @@ myIncome.addEventListener("click", function () {
 function addIncomeToVariable() {
 	var incomeForm = document.income;
 
-	oneTransaction.TypeOfCount        = "Income";
+	oneTransaction.TypeOfCount        = "income";
 	oneTransaction.NameOfCount        = incomeForm.NameOfCount.value;
 	oneTransaction.NameOfIncome       = incomeForm.NameOfIncome.value;
 	oneTransaction.DataOfCount        = incomeForm.DataOfCount.value;
@@ -106,7 +106,7 @@ function addIncomeToDB() {
 		    // в качестве позиции
 		    fs.write(file_handle, "\n" + json, null, 'utf8', function(err, written) {
 		        if (!err) {
-		            // Всё прошло хорошо
+		            fs.close(file_handle); // Всё прошло хорошо
 		        } else {
 		            // Произошла ошибка при записи
 		        }
@@ -115,6 +115,7 @@ function addIncomeToDB() {
 		    alert(error);
 		}
 		});
+
 }
 
 //-------------------------------------------------------------

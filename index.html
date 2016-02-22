@@ -53,26 +53,28 @@
         						</form>
     						</div>
     						<div>
+    							<form name="outcome">
         						<h3>Это вторая вкладка - рахода</h3>
-        						<label class="label"for="NameOfCount">C счета:</label>
-        						<input  type="text" name="NameOfCount" id="NameOfCount" class="IncomOutcomForm" required/>
+        						<label class="label"for="NameOfCountOutcome">C счета:</label>
+        						<input  type="text" name="NameOfCountOutcome" id="NameOfCountOutcome" class="IncomOutcomForm" required/>
         						<p></p>
-        						<label class="label" for="NameOfIncome">Расход на:</label>
-        						<input  type="text" name="NameOfIncome" id="NameOfIncome" class="IncomOutcomForm" required/>
+        						<label class="label" for="NameOfOutcome">Расход на:</label>
+        						<input  type="text" name="NameOfOutcome" id="NameOfOutcome" class="IncomOutcomForm" required/>
         						<p></p>
-        						<label class="label" for="DataOfCount">Дата:</label>
-								<input  type="date" type="text" name="DataOfCount" id="DataOfCount" class="IncomOutcomForm" required/>
+        						<label class="label" for="DataOfCountOutcome">Дата:</label>
+								<input  type="date" type="text" name="DataOfCountOutcome" id="DataOfCountOutcome" class="IncomOutcomForm" required/>
 								<p></p>
-        						<label class="label" for="ValueOfCount">Cумма:</label>
-        						<input  pattern="\d+(\.\d{2})?" type="text" name="ValueOfCount" id="ValueOfCount" class="IncomOutcomForm" required/>
+        						<label class="label" for="ValueOfCountOutcome">Cумма:</label>
+        						<input  pattern="\d+(\.\d{2})?" type="text" name="ValueOfCountOutcome" id="ValueOfCountOutcome" class="IncomOutcomForm" required/>
         						<p></p>
-        						<Label class="label" for="DescriptionOfCount">Описание:</label>
-								<textarea cols="30" rows="6" name="DescriptionOfCount" id="DescriptionOfCount" class="Description" required></textarea>
+        						<Label class="label" for="DescriptionOfCountOutcome">Описание:</label>
+								<textarea cols="30" rows="6" name="DescriptionOfCountOutcome" id="DescriptionOfCountOutcome" class="Description" required></textarea>
 								<p></p>
 								<span class="label"></span>
-								<input class="buttonAdd" type="button" name="AddOneTransaction" value="Добавить" id="AddOneTransaction"/>
+								<input class="buttonAdd" type="button" name="AddOneOutcome" value="Добавить" id="AddOneOutcome"/>
         						<p>Здесь будет код формы для расходов. Впоследствии и его тоже нужно написать и дописать 
         							скрипт для его работы</p>
+        						</form>
     						</div>
     						<div>
         						<h3>Это третья вкладка - дополнительно</h3>
@@ -126,5 +128,6 @@
 		</footer><!-- .footer -->
 
 		<script type="text/javascript" src="scripts/income.js"></script>
+		<script type="text/javascript" src="scripts/outcome.js"></script>
 	</body>
 </html>
