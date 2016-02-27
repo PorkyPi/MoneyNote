@@ -2,7 +2,7 @@
 // Global variable start here
 //-------------------------------------------------------------
 var oneTransactionOutcome = {};                      // object with all form income value 
-var myOutcome = document.outcome.AddOneOutcome;  // object button income
+var myOutcome = document.outcome.AddOneOutcome;      // object button income
 
 //-------------------------------------------------------------
 // type your code here
