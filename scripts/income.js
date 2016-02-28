@@ -104,7 +104,7 @@ function addIncomeToDB() {
 		    // Записываем в конец файла readme.txt фразу "Copyrighted by Me"
 		    // при открытии в режиме "a" указатель уже в конце файла, и мы передаём null
 		    // в качестве позиции
-		    fs.write(file_handle, "\n" + json, null, 'utf8', function(err, written) {
+		    fs.write(file_handle, "\n" + json + ",", null, 'utf8', function(err, written) {
 		        if (!err) {
 		            fs.close(file_handle); // Всё прошло хорошо
 		        } else {
