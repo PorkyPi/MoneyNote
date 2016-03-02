@@ -203,24 +203,28 @@ table {
 }
 
 th {
-	border: 2px solid gray;
+	border: 1px solid gray;
 	-webkit-border-radius: 5px;
 	word-break: break-all;
 	word-wrap: break-word;
 }
 
 td {
+	border: 1px solid gray;
 	vertical-align:middle;
 	border-top: 1px solid #e8edff;
 }
 
-tbody {
-	height: 100%; /*20px;*/
-	-webkit-overflow: scroll; /*чтобы убрать горизонтальную полосу, а то все закрывает*/
+.hystory tr  {
+    display: table;
+    table-layout: fixed;
 }
 
-#tabledinamic {
-
+tbody {
+	display: block;
+	height: 150px; 
+	overflow: hidden;
+    overflow-y: auto;
 }
 
 #first {
