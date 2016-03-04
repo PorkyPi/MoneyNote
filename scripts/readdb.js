@@ -70,7 +70,7 @@ function createTableLine (number, type, count, description, data, time, incomFro
 	columnFirst.setAttribute("style","max-width: 50px; width: 50px; overflow: hidden;");
 	columnSecond.setAttribute("style","max-width: 75px; width: 75px; overflow: hidden;");
 	columnThird.setAttribute("style","max-width: 75px; width: 75px; overflow: hidden;");
-	columnFourth.setAttribute("style","max-width: 188px; width: 188px; overflow: hidden;");
+	columnFourth.setAttribute("style","max-width: 200px; width: 200px; overflow: hidden;");
 	columnFifth.setAttribute("style","max-width: 75px; width: 75px; overflow: hidden;");
 	columnSixth.setAttribute("style","max-width: 75px; width: 75px; overflow: hidden;");
 	columnSeventh.setAttribute("style","max-width: 100px; width: 100px; overflow: hidden;");
