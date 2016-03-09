@@ -1,11 +1,70 @@
 //-------------------------------------------------------------
 // Global variable start here
 //-------------------------------------------------------------
+var gloIter = 1;
+var counts = [];
 var allTransAction = [];
+var income = document.income.AddOneIncome;
+var outcome = document.outcome.AddOneOutcome;
 //-------------------------------------------------------------
 // type your code here
 //-------------------------------------------------------------
 readdbfile();
+
+outcome.addEventListener("click", function () {
+	setTimeout(readdbfileLastString(), 3000);
+});
+income.addEventListener("click", function () {
+	setTimeout(readdbfileLastString(), 3000);
+});
+//-------------------------------------------------------------
+// function that read file DB to global variable
+//-------------------------------------------------------------
+function readdbfileLastString() {
+	var fs = require('fs');
+
+	fs.readFile("db/db.json", "utf8", function (err, data) {
+    if (err) {console.log("err");};
+    allTransAction = data.split("\n");
+    lastString();
+    });
+    function lastString() {
+    	var counter = 0;
+    	var data = JSON.parse(allTransAction[allTransAction.length-1]);
+		
+
+		if(data.TypeOfCount == "income") {
+			counter = makeMass(data.NameOfCount, counts.length+1);
+			counts[numberCount(data.NameOfCount)].value += Number(data.ValueOfCount); 
+			createTableLine(gloIter++, "Дебет", data.ValueOfCount, data.DescriptionOfCount, data.DataOfCount, data.TimeOfCount, data.NameOfIncome, data.NameOfCount, "", "", counts[numberCount(data.NameOfCount)].value.toFixed(2), "Удалить");
+		} else {
+			counter = makeMass(data.NameOfCountOutcome, counts.length+1);
+			counts[numberCount(data.NameOfCountOutcome)].value -= Number(data.ValueOfCountOutcome);
+			createTableLine(gloIter++, "Кредит", data.ValueOfCountOutcome, data.DescriptionOfCountOutcome, data.DataOfCountOutcome, data.TimeOfCountOutcome, "", "", data.NameOfOutcome, data.NameOfCountOutcome, counts[numberCount(data.NameOfCountOutcome)].value.toFixed(2), "Удалить");
+
+		}
+
+		function makeMass(b, number) {
+			for (var iter = 0; iter < counts.length; iter++){
+				if(data.NameOfCount === counts[iter].name){
+					
+					return number;}		
+			}
+			
+			counts[number] = new countData();
+			counts[number].name = b;
+			return number += 1;
+		}
+
+		function numberCount(b) {
+			for (var iter = 0; iter < counts.length; iter++){
+						if(b === counts[iter].name){
+							return iter;}		
+					}
+		}
+	}
+
+}
 
 //-------------------------------------------------------------
 // function that read file DB to global variable
@@ -16,7 +75,6 @@ function readdbfile() {
 	fs.readFile("db/db.json", "utf8", function (err, data) {
     if (err) {console.log("err");};
     allTransAction = data.split("\n");
-    console.log(allTransAction);
     addingTableLineWhithData ();
 	});
 }
@@ -87,18 +145,68 @@ function createTableLine (number, type, count, description, data, time, incomFro
 // table. It create new line in table whirth table.
 //-------------------------------------------------------------
 function addingTableLineWhithData () {
-	var i;
+	
+	var counter = 0;
 
-	for( i = 1; i < allTransAction.length; i++) {
-		var data = JSON.parse(allTransAction[i]);
+	for(gloIter = 1; gloIter < allTransAction.length; gloIter++) {
+		var data = JSON.parse(allTransAction[gloIter]);
+		
+		
+
+		//counter = makeMass(data.NameOfCount, counter);
+		//console.log(counts);
 
 		if(data.TypeOfCount == "income") {
-			createTableLine(i, "Дебет", data.ValueOfCount, data.DescriptionOfCount, data.DataOfCount, data.TimeOfCount, data.NameOfIncome, data.NameOfCount, "", "", "Саумма", "Удалить");
+			counter = makeMass(data.NameOfCount, counter);
+			counts[numberCount(data.NameOfCount)].value += Number(data.ValueOfCount); 
+			createTableLine(gloIter, "Дебет", data.ValueOfCount, data.DescriptionOfCount, data.DataOfCount, data.TimeOfCount, data.NameOfIncome, data.NameOfCount, "", "", counts[numberCount(data.NameOfCount)].value.toFixed(2), "Удалить");
 		} else {
-			createTableLine(i, "Кредит", data.ValueOfCountOutcome, data.DescriptionOfCountOutcome, data.DataOfCountOutcome, data.TimeOfCountOutcome, "", "", data.NameOfOutcome, data.NameOfCountOutcome, "сумма", "delete");
+			counter = makeMass(data.NameOfCountOutcome, counter);
+			counts[numberCount(data.NameOfCountOutcome)].value -= Number(data.ValueOfCountOutcome);
+			createTableLine(gloIter, "Кредит", data.ValueOfCountOutcome, data.DescriptionOfCountOutcome, data.DataOfCountOutcome, data.TimeOfCountOutcome, "", "", data.NameOfOutcome, data.NameOfCountOutcome, counts[numberCount(data.NameOfCountOutcome)].value.toFixed(2), "Удалить");
 
+		}
+
+		function makeMass(b, number) {
+			for (var iter = 0; iter < counts.length; iter++){
+				if(data.NameOfCount === counts[iter].name){
+					
+					return number;}		
+			}
+			
+			counts[number] = new countData();
+			counts[number].name = b;
+			return number += 1;
+		}
+
+		function numberCount(b) {
+			for (var iter = 0; iter < counts.length; iter++){
+						if(b === counts[iter].name){
+							return iter;}		
+					}
 		}
 	
 	}
 
 }
+
+//-------------------------------------------------------------
+// The object thet contain all atributs for every counts
+// 
+//-------------------------------------------------------------
+function countData() {
+	this.name = "";
+	this.value = 0;
+}
+
+
+//-------------------------------------------------------------
+// function thet check for exist count if not create one
+// 
+//-------------------------------------------------------------
+
+
+//-------------------------------------------------------------
+// function thet return number of exist count
+// 
+//-------------------------------------------------------------

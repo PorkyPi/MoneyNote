@@ -29,7 +29,7 @@ h3 {
 }
 
 body {
-	background-image: url(../pic/back.jpg);
+	background: #060D0F;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -91,7 +91,7 @@ body {
 
 .notebook > input + label {
     display: inline-block;
-    border: 1px solid gray;
+    border: 1px solid #809FAA;
     padding: 4px;
     cursor: pointer;
     position: relative;
@@ -103,12 +103,12 @@ body {
 }
 
 .notebook > input + label:hover {
-    color: #3E5F8A;
+    color: #90AD56;
 }
 
 .notebook > input + label:last-of-type::after {
     display: block;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #809FAA;
     width: 2000px;
     content: "";
     position: absolute;
@@ -117,7 +117,7 @@ body {
 }
 
 .notebook > input:checked + label {
-    color: #3E5F8A;
+    color: #90AD56;
     border-bottom: none;
     padding-bottom: 5px;
 }
@@ -129,7 +129,7 @@ body {
 .notebook > div {
     white-space: normal;
     display: none;
-    border: 1px solid gray;
+    border: 1px solid #809FAA;
     border-top: none;
     margin: 0px;
     padding: 2px 20px;
@@ -204,21 +204,22 @@ table {
 }
 
 th {
-	border: 1px solid gray;
+	border: 1px solid #809FAA;
 	-webkit-border-radius: 5px;
 	word-break: break-all;
 	word-wrap: break-word;
 }
 
 td {
-	border: 1px solid gray;
+	border: 1px solid #809FAA;
 	vertical-align:middle;
-	border-top: 1px solid #e8edff;
+	border-top: 1px solid #809FAA;
 }
 
 .hystory tr  {
     display: table;
     table-layout: fixed;
+
 }
 
 tbody {
@@ -226,6 +227,7 @@ tbody {
 	height: 290px; 
 	overflow: hidden;
     overflow-y: auto;
+    background: #809FAA;
 }
 
 #first {
